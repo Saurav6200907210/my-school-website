@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>st paul public school</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+        <img src="logo of image.jpg" alt="">
+        St Paul Public School Teghra (Begusarai)</h1>
+        <hr>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">My Portfolio</div>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#hostel">Hostel</a>
+                <a href="#fee stracture">Fee Stracture</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+     <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="school.avif" alt="school">
+                <div class="caption">Beauty of st. paul </div>
+            </div>
+            <div class="slide">
+                <img src="screenshot-1737215429190.png" alt="students">
+                <div class="caption">students of st paul</div>
+            </div>
+            <div class="slide">
+                <img src="2nd img.png" alt="group">
+                <div class="caption">principle of st. paul</div>
+            </div>
+            <div class="slide">
+                <img src="Screenshot (328).png" alt="view">
+                <div class="caption">top view</div>
+            </div>
+        </div>
+
+        <div class="slider-nav">
+            <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slider = document.querySelector('.slider');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        // Function to change slide
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Function to go to specific slide
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateSlider();
+        }
+
+        // Update slider position and dots
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 25}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+    
+    
+      <div class="content">
+        <div id="home">
+          <div class="home-header">
+            <h1>Welcome to Our School website.</h1>
+            <p class="welcome-text">
+              A wonderful vision in the name and form of St. Paul Public School, Teghra, Begusarai, came into existence in 2012 under the patronage of a great philanthropist Mr Sunil Kumar Singh after recognizing a genuine need to assist the children of Teghra who was compelled to travel to Begusarai and Patna for quality education because of the lack of a reputed school in Teghra. This is how the beautiful journey started. The school has been serving society successfully for 13 years and has never looked back ever since with Almighty’s care, blessings, and all-time support from all sections in and around Teghra. Brief Description of the School St. Paul Public School, Teghra, one of the leading CBSE-affiliated schools in Begusarai district, is deeply rooted in its philosophy of bringing the best in educational practices to its students. A school that places equal emphasis on scholastic and foundational domains to create empowered students who will not just be knowledgeable but also skilled to apply their knowledge meaningfully to create meaningful and positive changes in their lives. The school is solely committed to enriching the students learning with an innovative curriculum that is based on two strong pillars. Scholastic Domain- This includes the teaching-learning experience in subject areas relevant to the age group. There is a vertical progression and horizontal alignment to ensure that interconnectedness of knowledge is maintained, and students see knowledge as one body instead of fragmented pieces of facts and figures Foundational Domain- This includes four areas that are integrated with the scholastic domain and help the student develop the affective aspects of attitudes, dispositions, and attributes that will enable them to create a successful life for themselves and imbibe the qualities of a good citizen of the country and the world. These domains comprise: o Art Appreciation o Sports & Fitness o Citizenship Studies o Tech Integration Our school’s approach illustrates the inter-relationship of all disciplines of knowledge, promotes social and reflective thinking, and fosters the ability to face the myriad challenges of life comfortably. The technology-enabled classrooms coupled with interactive curriculum transactions, make learning a more engaging
+               and joyous experience. Activity-based learning remains the core within which teachers weave storytelling sessions, fine motor and gross motor activities, language skills, and psychomotor skills. The tapestry of the curriculum is enhanced with trips and visits to local places. A peep into the classrooms would reveal an ever-smiling loving teacher, engaged students, fun, and frolic. Children love to come to school as their days are exciting. Each classroom is unique in its way. Here children are allowed to try, choose, change, reject, and discover their areas of interest and pursue them with fervor. We give children the freedom to make mistakes which boosts confidence and self-faith. We believe in nurturing compassionate individuals, who have a sense of justice, are global citizens, change agents who will in turn be good leaders rather than manufactured clones. Nurturing children into young, compassionate, and beautiful individuals is what we aim at. Learning is stress-free, fun-filled, and completely student-led. Children love coming to school as they find it a second home. There are a host of activities and inter-house as well as inter-section competitions through which we not only shape children into well-rounded personalities but also expose them to explore their likes and areas of interest.
+            </p>
+          </div>
+    
+          <div class="featured-section">
+            <div class="feature-card">
+              <img src="campusacchive.png" alt="campus acchivement">
+              <h3>CAMPUS ACHIVEMENT</h3>
+              <p>We are continuously achieving various goals and milestones that contribute to the overall success of the educational goal. Academic Excellence we have high academic standards and achievements. Student Achievements we celebrate the achievements of individual students, such as academic awards, sports accomplishments, artistic achievements, and leadership roles. Innovative Teaching Methods: We have innovative teaching methods and technologies to enhance the learning experience for students. We work for incorporating new educational tools, adopting project-based learning, or integrating technology into the curriculum. Diverse Extracurricular Activities We offer a wide range of extracurricular activities, such as sports, arts, clubs, and community service, contribute to a well-rounded education and personal development for students. Positive School Culture 
+                We promote a safe and supportive environment where students feel valued, respected, and motivated to learn. Professional Development for Teachers We invest in the ongoing professional development of our teachers contribute to the overall quality of education.</p>
+              <button class="cta-button">Learn More</button>
+            </div>
+    
+            <div class="feature-card">
+              <img src="Screenshot 2025-01-19 073553.png" alt="newspaper img">
+              <h3>MEDIA COVERAGE</h3>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                </p>
+              <button class="cta-button">Learn More</button>
+            </div>
+          </div>
+    
+          <div class="featured-section">
+            <div class="feature-card">
+              <img src="Screenshot 2025-01-19 075510.png" alt="newspaper img">
+              <h3>PREPARED FIRELESS FOOD</h3>
+              <p>
+                संत_पॉल_पब्लिक_स्कूल_तेघड़ा में महीने के अंतिम शनिवार को _बैग_लेस_डे पर कक्षा प्रथम से पंचम तक के विद्यार्थियों के लिए एक रोमांचक #_फायर_लैस_कुकिंग_प्रतियोगिता का आयोजन किया। इस “ #_कुकिंग_विदाउट_फायर” कार्यक्रम में बड़ी संख्या में प्रतिभागियों ने बिना किसी फायर सोर्स के शानदार व्यंजन तैयार करके अपने पाक कौशल और रचनात्मकता का प्रदर्शन किया। विद्यालय परिसर में आयोजित इस प्रतियोगिता का उद्देश्य विद्यार्थियों के बीच स्वस्थ और रचनात्मक खाना पकाने के तरीकों को बढ़ावा देना। प्रतिभागियों को आग के स्रोत का उपयोग किए बिना फलों, सब्जियों, अनाज और डेयरी उत्पादों जैसी विभिन्न सामग्रियों का उपयोग करके स्वादिष्ट व्यंजनों को तैयार करने की चुनौती दी गई। विद्यार्थियों ने आसान और त्वरित व्यंजनों</span>
+                का उपयोग करके ककड़ी रोल, हरी सलाद, सब्जी सैंडविच, स्विस रोल, मैंगो शेक, ब्रेड केक और झाल-मूरही जैसे कई अन्य स्वस्थ और स्वादिष्ट व्यंजन व विभिन्न प्रकार के पेय पदार्थ तैयार किए। उन्होंने एक कलात्मक और सौंदर्यपूर्ण तरीके से व्यंजन परोसे जो सबसे आकर्षक रहा और उनका प्रदर्शन स्वाद कलियों को गुदगुदाने वाला रहा। इस प्रतियोगिता में विभिन्न पाठ्यक्रमों की लगभग 17 टीमों ने भाग लिया | कार्यक्रम का आयोजन शिक्षिका कविता कुमारी व कंचना कुमारी के द्वारा किया गया। प्रतियोगिता में विजेताओं का निर्णय प्राचार्य डॉ विनय, अनुभवी शिक्षिकाओं में श्रीमती प्रीति प्रिया, श्रीमती रीना कुमारी और विद्यालय समन्वयक श्री राम कुमार मिश्रा के द्वारा किया गया, जिन्होंने व्यंजनों का मूल्यांकन उनके स्वाद, प्रस्तुति और पोषण मूल्य के आधार पर किया। प्रतिभागियों के प्रयासों से निर्णायक अभिभूत हो गए और कड़ी प्रतिस्पर्धा के बीच परिणाम घोषित किए गए। इस प्रतियोगिता में सबों की डिश प्रशंसनीय रही। वहीं कक्षा षष्टम से लेकर अष्टम के बीच शिक्षक पवन कुमार, 
+                विक्की कुमार और अनुपम कुमार के नेतृत्व में राकेश कुमार, सुजीत मिश्रा और म्यूजिक शिक्षक प्रफुल्ल कुमार के सहयोग से कैलेंडर मेकिंग और क्विज प्रतियोगिता का आयोजन किया गया I कैलेण्डर मेकिंग प्रतियोगिता का आयोजन करने का उद्देश्य रहा है - बच्चों में आर्ट और कला को बढावा देना I जबकि क्विज प्रतियोगिता का आयोजन करने का उद्देश्य है 
+             
+            </p>
+              <button class="cta-button" onclick="toggleText()">Learn More</button>
+            </div>
+    
+            <div class="feature-card">
+              <img src="Screenshot 2025-01-19 081909.png" alt="Sport">
+              <h3>Sports & Co-Curricular Activities</h3>
+              <p>Sports & Co-Curricular Activities The purpose of these activities is to promote leadership quality in student. We intend to develop aptitude in students through active participation in cultural and literary activities like dramatics, debates, declamation contest and music contest. We do hold inter-house competition in sports, games, cultural and literary activities culminating in the annual sports and Annual Day functions. The School is creating a healthy atmosphere of inter-house competitions regularly. The school exposes the children to hobbies such as reading, Drawing, Dancing, Singing, Debating, Yoga and acting. In addition the school is providing the facilities of Kabaddi, Khokho, Basketball, Teble Tennis, Volleyball, Badminton and Carom Board etc. For kids, rhyming is taught on drum beating.</p>
+              <button class="cta-button">View More</button>
+            </div>
+          </div>
+        </div>
+    
+        <div id="about" class="hidden">This is the About Page.</div>
+        <div id="services" class="hidden">Our Services are listed here.</div>
+        <div id="contact" class="hidden">Contact us at contact@example.com.</div>
+      </div>
+    
+      <script>
+        function showContent(pageId) {
+          // Hide all content sections
+          const contentDivs = document.querySelectorAll('.content > div');
+          contentDivs.forEach(div => div.classList.add('hidden'));
+          
+          // Show the selected content
+          document.getElementById(pageId).classList.remove('hidden');
+          
+          // Update active state of sidebar links
+          const links = document.querySelectorAll('.sidebar a');
+          links.forEach(link => link.classList.remove('active'));
+          event.target.classList.add('active');
+        }
+      </script>
+    
+</body>
+</html>

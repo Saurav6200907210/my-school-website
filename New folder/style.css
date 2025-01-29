@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+header h1{
+    display: flex;
+    font-size: 35px;
+    color: rgb(80, 43, 123);
+    align-items: center;
+    margin: 20px;
+    padding: 5px;
+    justify-content: center;
+}
+header h1 img{
+    height: 70px;
+    width: 100px;
+}
+nav {
+    background: #333;
+    padding: 15px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hamburger Menu Animation */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    height: 400px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Dots Navigation */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider-container {
+        margin: 20px;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .caption {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+.content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Home page specific styles */
+  .home-header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .home-header h1{
+    margin-bottom: 20px;
+    color: #719de6;
+    
+  }
+  .home-header p{
+    margin: 0 150px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .featured-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .feature-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .welcome-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .cta-button:hover {
+    background-color: #45a049;
+  }
